@@ -2,6 +2,9 @@ import PersonalInformationInput from "./PersonalInformationInput";
 import SkillInput from "./SkillInput";
 import EducationInput from "./EducationInput";
 import ExperienceInput from "./ExperienceInput";
+import GenerateButton from "./GenerateButton";
+import LoadExampleButton from "./LoadExampleButton";
+import ResetButton from "./ResetButton";
 
 function CVInput() {
   return (
@@ -10,6 +13,9 @@ function CVInput() {
       <SkillInput />
       <EducationInput />
       <ExperienceInput />
+      <GenerateButton />
+      <LoadExampleButton />
+      <ResetButton />
     </div>
   );
 }
