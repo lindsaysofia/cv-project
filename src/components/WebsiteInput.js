@@ -1,16 +1,12 @@
+import Website from "./Website";
+import AddButton from "./AddButton";
+
 function WebsiteInput() {
   return (
     <div>
-      <h3>Add a Website</h3>
-      <input 
-        placeholder="Title"
-        type="text"
-      />
-      <input 
-        placeholder="Link"
-        type="text"
-      />
-      
+       <h3>Add a Website</h3>
+       <Website />
+      <AddButton />
     </div>
   );
 }
