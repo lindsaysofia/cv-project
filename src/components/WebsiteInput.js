@@ -3,8 +3,8 @@ import AddButton from "./AddButton";
 
 function WebsiteInput() {
   return (
-    <div>
-       <h3>Add a Website</h3>
+    <div className="websiteInput">
+       <h3 className="websiteInput__header">Add a Website</h3>
        <Website />
       <AddButton />
     </div>

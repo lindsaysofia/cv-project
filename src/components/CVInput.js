@@ -8,7 +8,7 @@ import ResetButton from "./ResetButton";
 
 function CVInput() {
   return (
-    <div>
+    <div className="cvInput">
       <PersonalInformationInput />
       <SkillInput />
       <EducationInput />

@@ -1,6 +1,6 @@
 function DeleteButton() {
   return (
-    <button>
+    <button className="deleteButton">
       Delete
     </button>
   );

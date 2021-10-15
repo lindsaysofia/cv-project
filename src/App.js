@@ -4,7 +4,8 @@ import CVDisplay from './components/CVDisplay';
 
 function App() {
   return (
-    <div >
+    <div className="app">
+      <h1>CV Application</h1>
       <CVInput />
       <CVDisplay />
     </div>

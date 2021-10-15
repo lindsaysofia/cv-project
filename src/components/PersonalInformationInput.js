@@ -2,25 +2,29 @@ import WebsiteInput from "./WebsiteInput";
 
 function PersonalInformationInput() {
   return (
-    <div>
-      <h2>Personal Information</h2>
+    <div className="personalInformationInput">
+      <h2 className="personalInformationInput__header">Personal Information</h2>
       <input 
         placeholder="First Name"
         type="text"
+        className="personalInformationInput__firstName"
       />
       <input 
         placeholder="Last Name"
         type="text"
+        className="personalInformationInput__lastName"
       />
       <input 
         placeholder="Title"
         type="text"
+        className="personalInformationInput__title"
       />
       <textarea
         placeholder="Description"
         type="text"
+        className="personalInformationInput__description"
       ></textarea>
-      <div>
+      <div className="personalInformationInput__photo">
         <label for="photo">Choose a Photo to Upload</label>
         <input 
           id="photo"
@@ -33,14 +37,17 @@ function PersonalInformationInput() {
       <input 
         placeholder="Location"
         type="text"
+        className="personalInformationInput__location"
       />
       <input 
         placeholder="Phone Number"
         type="text"
+        className="personalInformationInput__phoneNumber"
       />
       <input 
         placeholder="Email"
         type="text"
+        className="personalInformationInput__email"
       />
       <WebsiteInput />
     </div>
