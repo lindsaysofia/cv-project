@@ -3,8 +3,8 @@ import AddButton from "./AddButton";
 
 function EducationInput() {
   return (
-    <div>
-      <h2>Education</h2>
+    <div className="educationInput">
+      <h2 className="educationInput__header">Education</h2>
       <Education />
       <AddButton />
     </div>
