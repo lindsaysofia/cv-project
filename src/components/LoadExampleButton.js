@@ -1,6 +1,6 @@
 function LoadExampleButton() {
   return (
-    <button>
+    <button className="loadExampleButton">
       Load Example
     </button>
   );

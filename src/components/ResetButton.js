@@ -1,6 +1,6 @@
 function ResetButton() {
   return (
-    <button>
+    <button className="generateButton">
       Reset
     </button>
   );

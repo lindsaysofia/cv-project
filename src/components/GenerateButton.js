@@ -1,6 +1,6 @@
 function GenerateButton() {
   return (
-    <button>
+    <button className="generateButton">
       Generate PDF
     </button>
   );
