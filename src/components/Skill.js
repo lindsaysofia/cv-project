@@ -2,10 +2,11 @@ import DeleteButton from "./DeleteButton";
 
 function Skill() {
   return (
-    <div>
+    <div className="skill">
       <input 
-        placeholder="Skill"
+        placeholder="Add a Skill"
         type="text"
+        className="skill_addSkill"
       />
       <DeleteButton />
     </div>

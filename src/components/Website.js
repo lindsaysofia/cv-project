@@ -4,14 +4,14 @@ function Website() {
   return (
     <div className="website">
       <input 
-        placeholder="Title"
+        placeholder="Website Name"
         type="text"
-        className="website__title"
+        className="website__websiteName"
       />
       <input 
-        placeholder="Link"
+        placeholder="Wesbite Link"
         type="text"
-        className="link"
+        className="website__websiteLink"
       />
       <DeleteButton />
     </div>
