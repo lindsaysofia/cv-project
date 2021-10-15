@@ -3,8 +3,8 @@ import AddButton from "./AddButton";
 
 function ExperienceInput() {
   return (
-    <div>
-      <h2>Experience</h2>
+    <div className="experienceInput">
+      <h2 className="experienceInput__header">Experience</h2>
       <Experience />
       <AddButton />
     </div>
