@@ -1,4 +1,5 @@
 import WebsiteInput from "./WebsiteInput";
+import "../styles/PersonalInformationInput.css";
 
 function PersonalInformationInput() {
   return (

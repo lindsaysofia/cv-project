@@ -5,6 +5,7 @@ import ExperienceInput from "./ExperienceInput";
 import GenerateButton from "./GenerateButton";
 import LoadExampleButton from "./LoadExampleButton";
 import ResetButton from "./ResetButton";
+import "../styles/CVInput.css";
 
 function CVInput() {
   return (
