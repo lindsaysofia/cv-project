@@ -1,3 +1,8 @@
+:root {
+  --color-header:#104046;
+  --color-placeholder: #005D5C;
+}
+
 .personalInformationInput {
   display: flex;
   flex-direction: column;
@@ -5,12 +10,17 @@
 }
 
 .personalInformationInput__photo {
-  color: inherit;
+  margin-top: 1em;
+}
+
+.personalInformationInput__photo label {
+  color: var(--color-placeholder);
+  padding-left: 1em;
 }
 
 .personalInformationInput__photo input {
   border: none;
   font-family: 'Roboto', sans-serif;
-  font-size: 1em;
+  font-size: 1em;  
 }
 

@@ -26,7 +26,7 @@ function PersonalInformationInput() {
         className="personalInformationInput__description"
       ></textarea>
       <div className="personalInformationInput__photo">
-        <label for="photo">Choose a Photo to Upload</label>
+        <label htmlFor="photo">Profile Photo</label>
         <input 
           id="photo"
           name="photo"
