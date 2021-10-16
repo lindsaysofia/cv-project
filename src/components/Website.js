@@ -1,4 +1,5 @@
 import DeleteButton from "./DeleteButton";
+import "../styles/Website.css";
 
 function Website() {
   return (
