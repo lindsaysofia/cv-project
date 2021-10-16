@@ -32,6 +32,20 @@ textarea {
   font-size: 1em;
 }
 
+button {
+  border: none;
+  outline: none;
+  background-color: var(--color-header);
+  color: white;
+  font-size: 1em;
+  width: 100%;
+  margin: .25em;
+}
+
+button:hover {
+  background-color: var(--color-placeholder);
+}
+
 .app {
   display: flex;
   flex-direction: column;
