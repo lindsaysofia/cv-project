@@ -1,5 +1,16 @@
 .personalInformationInput {
   display: flex;
   flex-direction: column;
+  width: 80%;
+}
+
+.personalInformationInput__photo {
+  color: inherit;
+}
+
+.personalInformationInput__photo input {
+  border: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
 }
 
