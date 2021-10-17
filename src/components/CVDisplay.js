@@ -2,10 +2,11 @@ import PersonalInformationDisplay from "./PersonalInformationDisplay";
 import SkillDisplay from "./SkillDisplay";
 import EducationDisplay from "./EducationDisplay";
 import ExperienceDisplay from "./ExperienceDisplay";
+import "../styles/CVDisplay.css";
 
 function CVDisplay() {
   return (
-    <div>
+    <div className="cvDisplay">
       <PersonalInformationDisplay />
       <SkillDisplay />
       <EducationDisplay />
