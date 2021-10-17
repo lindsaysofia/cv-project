@@ -1,3 +1,5 @@
+import "../styles/GenerateButton.css";
+
 function GenerateButton() {
   return (
     <button className="generateButton">

@@ -1,5 +1,6 @@
 import Skill from "./Skill";
 import AddButton from "./AddButton";
+import "../styles/SkillInput.css";
 
 function SkillInput() {
   return (

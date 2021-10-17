@@ -1,6 +1,8 @@
+import "../styles/ResetButton.css";
+
 function ResetButton() {
   return (
-    <button className="generateButton">
+    <button className="resetButton">
       Reset
     </button>
   );

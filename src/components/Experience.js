@@ -1,4 +1,5 @@
 import DeleteButton from "./DeleteButton";
+import "../styles/Experience.css";
 
 function Experience() {
   return (

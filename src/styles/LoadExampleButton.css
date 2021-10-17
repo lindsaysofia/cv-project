@@ -1,0 +1,8 @@
+.loadExampleButton {
+  background-color: hsl(48, 63%, 17%);
+  width: 80%;
+}
+
+.loadExampleButton:hover {
+  background-color: hsl(51, 100%, 18%);
+}

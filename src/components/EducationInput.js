@@ -1,5 +1,6 @@
 import Education from "./Education";
 import AddButton from "./AddButton";
+import "../styles/EducationInput.css";
 
 function EducationInput() {
   return (

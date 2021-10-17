@@ -1,3 +1,5 @@
+import "../styles/LoadExampleButton.css";
+
 function LoadExampleButton() {
   return (
     <button className="loadExampleButton">

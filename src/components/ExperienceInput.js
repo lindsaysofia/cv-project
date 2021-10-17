@@ -1,5 +1,6 @@
 import Experience from "./Experience";
 import AddButton from "./AddButton";
+import "../styles/ExperienceInput.css";
 
 function ExperienceInput() {
   return (

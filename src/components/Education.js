@@ -1,4 +1,5 @@
 import DeleteButton from "./DeleteButton";
+import "../styles/Education.css";
 
 function Education() {
   return (

@@ -1,0 +1,8 @@
+.resetButton {
+  background-color: hsl(0, 63%, 17%);
+  width: 80%;
+}
+
+.resetButton:hover {
+  background-color: hsl(0, 100%, 18%);
+}

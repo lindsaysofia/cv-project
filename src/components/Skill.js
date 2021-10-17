@@ -1,4 +1,5 @@
 import DeleteButton from "./DeleteButton";
+import "../styles/Skill.css";
 
 function Skill() {
   return (
