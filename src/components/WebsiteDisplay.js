@@ -5,8 +5,13 @@ function WebsiteDisplay(props) {
       {websites.map((website) => {
         return (
           <div className="websiteDisplay__website">
-            <p className="websiteDisplay__websiteName">{website.websiteName}</p>
-            <p className="websiteDisplay__websiteLink">{website.websiteLink}</p>
+            <h3 className="websiteDisplay__websiteName">{website.websiteName}</h3>
+            <a 
+              className="websiteDisplay__websiteLink" 
+              href={website.websiteLink} 
+              target="_blank" 
+              rel="noreferrer"
+            >{website.websiteLink}</a>
           </div>
         );
       })}

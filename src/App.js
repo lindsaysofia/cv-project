@@ -18,7 +18,7 @@ class App extends Component {
         email: 'bob@icanfixthat.com',
         websites: [{
           websiteName: 'github',
-          websiteLink: 'github.com/bobTheBuilder',
+          websiteLink: 'https://github.com/bobTheBuilder',
         }],
       },
       skills: ['Problem-Solving'],
