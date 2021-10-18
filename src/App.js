@@ -21,7 +21,7 @@ class App extends Component {
           websiteLink: 'https://github.com/bobTheBuilder',
         }],
       },
-      skills: ['Problem-Solving'],
+      skills: ['Problem-Solving', 'A Can-Do Attitude'],
       educations: [{
         university: 'University of Bobsville',
         location: 'Bobsville, United Kingdom',
