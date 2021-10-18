@@ -4,13 +4,13 @@ import EducationDisplay from "./EducationDisplay";
 import ExperienceDisplay from "./ExperienceDisplay";
 import "../styles/CVDisplay.css";
 
-function CVDisplay() {
+function CVDisplay(props) {
   return (
     <div className="cvDisplay">
-      <PersonalInformationDisplay />
-      <SkillDisplay />
-      <EducationDisplay />
-      <ExperienceDisplay />
+      <PersonalInformationDisplay data={props.data}/>
+      <SkillDisplay data={props.data}/>
+      <EducationDisplay data={props.data}/>
+      <ExperienceDisplay data={props.data}/>
     </div>
   );
 }

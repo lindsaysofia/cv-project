@@ -3,8 +3,8 @@ import './styles/App.css';
 import CVInput from './components/CVInput';
 import CVDisplay from './components/CVDisplay';
 
-class App extends React.Component {
-  constructor() {
+class App extends Component {
+  constructor(props) {
     super(props);
     this.exampleData = {
       personalInformation: {
@@ -12,9 +12,9 @@ class App extends React.Component {
         lastName: 'the Builder',
         title: 'Construction Worker',
         description: 'Can we fix it? Yes, we can!',
-        photo: './img/photo.png',
+        photo: '../img/photo.png',
         location: 'Fixham Harbour',
-        phoneNumber: '123-456-7890',
+        phone: '123-456-7890',
         email: 'bob@icanfixthat.com',
         websites: [{
           websiteName: 'github',
@@ -22,7 +22,7 @@ class App extends React.Component {
         }],
       },
       skills: ['Problem-Solving'],
-      education: [{
+      educations: [{
         university: 'University of Bobsville',
         location: 'Bobsville, United Kingdom',
         degree: 'B.A.',
@@ -30,7 +30,7 @@ class App extends React.Component {
         from: '1997',
         to: 'Present',
       }],
-      experience: [{
+      experiences: [{
         position: 'Owner',
         company: `Bob's Yard`,
         location: 'Bobsville',
@@ -45,8 +45,8 @@ class App extends React.Component {
     return (
       <div className="app">
         <h1 className="app__header">CV Application</h1>
-        <CVInput data={this.exampleData}/>
-        <CVDisplay />
+        <CVInput />
+        <CVDisplay data={this.exampleData}/>
       </div>
     );
   }
