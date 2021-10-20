@@ -22,22 +22,42 @@ class App extends Component {
         }],
       },
       skills: ['Problem-Solving', 'A Can-Do Attitude'],
-      educations: [{
-        university: 'University of Bobsville',
-        location: 'Bobsville, United Kingdom',
-        degree: 'B.A.',
-        subject: 'Construction',
-        from: '1997',
-        to: 'Present',
-      }],
-      experiences: [{
-        position: 'Owner',
-        company: `Bob's Yard`,
-        location: 'Bobsville',
-        from: '1997',
-        to: '2007',
-        description: 'Built and maintained the yard with my father, Robert, and the Can-Do Crew',
-      }],
+      educations: [
+        {
+          university: 'University of Bobsville',
+          location: 'Bobsville, United Kingdom',
+          degree: 'B.A.',
+          subject: 'Construction',
+          from: '1997',
+          to: 'Present',
+        },
+        {
+          university: 'University of Bobsville',
+          location: 'Bobsville, United Kingdom',
+          degree: 'B.A.',
+          subject: 'Construction',
+          from: '1997',
+          to: 'Present',
+        }
+      ],
+      experiences: [
+        {
+          position: 'Owner',
+          company: `Bob's Yard`,
+          location: 'Bobsville',
+          from: '1997',
+          to: '2007',
+          description: 'Built and maintained the yard with my father, Robert, and the Can-Do Crew',
+        },
+        {
+          position: 'Owner',
+          company: `Bob's Yard`,
+          location: 'Bobsville',
+          from: '1997',
+          to: '2007',
+          description: 'Built and maintained the yard with my father, Robert, and the Can-Do Crew',
+        }
+      ],
     };
   }
 

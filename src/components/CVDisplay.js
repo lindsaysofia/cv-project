@@ -1,18 +1,14 @@
-import PersonalInformationDisplayHeader from "./PersonalInformationDisplayHeader";
-import PersonalInformationDisplaySidebar from "./PersonalInformationDisplaySidebar";
-import SkillDisplay from "./SkillDisplay";
-import EducationDisplay from "./EducationDisplay";
-import ExperienceDisplay from "./ExperienceDisplay";
+import Header from "./Header";
+import Sidebar from "./Sidebar";
+import Main from "./Main";
 import "../styles/CVDisplay.css";
 
 function CVDisplay(props) {
   return (
     <div className="cvDisplay">
-      <PersonalInformationDisplayHeader data={props.data}/>
-      <PersonalInformationDisplaySidebar data={props.data}/>
-      <SkillDisplay data={props.data}/>
-      <EducationDisplay data={props.data}/>
-      <ExperienceDisplay data={props.data}/>
+      <Header data={props.data}/>
+      <Sidebar data={props.data}/>
+      <Main data={props.data}/>
     </div>
   );
 }
