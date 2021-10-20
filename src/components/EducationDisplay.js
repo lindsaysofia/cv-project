@@ -1,3 +1,5 @@
+import "../styles/EducationDisplay.css";
+
 function EducationDisplay(props) {
   const { educations } = props.data;
   return (

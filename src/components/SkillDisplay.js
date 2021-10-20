@@ -1,3 +1,4 @@
+import "../styles/SkillDisplay.css";
 function SkillDisplay(props) {
   const { skills } = props.data;
   return (

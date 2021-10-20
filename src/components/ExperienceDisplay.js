@@ -1,3 +1,5 @@
+import "../styles/ExperienceDisplay.css";
+
 function ExperienceDisplay(props) {
   const { experiences } = props.data;
   return (
