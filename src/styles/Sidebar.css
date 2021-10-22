@@ -1,3 +1,25 @@
+:root {
+  --color-header:#104046;
+  --color-placeholder: #005D5C;
+}
+
 .sidebar {
   grid-area: sidebar;
+  background-color: var(--color-header);
+  color: white;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+}
+
+h3,
+a {
+  color: white;
+}
+
+
+.sidebar__location,
+.sidebar__phone,
+.sidebar__email {
+  border-bottom: 1px solid white;
 }

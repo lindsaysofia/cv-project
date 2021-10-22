@@ -16,10 +16,16 @@ class App extends Component {
         location: 'Fixham Harbour',
         phone: '123-456-7890',
         email: 'bob@icanfixthat.com',
-        websites: [{
+        websites: [
+        {
           websiteName: 'github',
           websiteLink: 'https://github.com/bobTheBuilder',
-        }],
+        },
+        {
+          websiteName: 'github',
+          websiteLink: 'https://github.com/bobTheBuilder',
+        }
+      ],
       },
       skills: ['Problem-Solving', 'A Can-Do Attitude'],
       educations: [

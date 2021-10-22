@@ -24,12 +24,16 @@ function Sidebar(props) {
         <p className="sidebar__emailDetail">{email}</p>
       </div>
       <WebsiteDisplay data={props.data}/>
-      <h3 className="sidebar__skill">Skills</h3>
-      {skills.map((skill) => {
-        return (
-          <p className="sidebar__skillDetail">{skill}</p>
-        );
-      })}
+      <div className="sidebar__skill">
+        <h3 >Skills</h3>
+        <ul>
+          {skills.map((skill) => {
+            return (
+              <p className="sidebar__skillDetail">{skill}</p>
+            );
+          })}
+        </ul>
+      </div>
     </div>
   );
 }
