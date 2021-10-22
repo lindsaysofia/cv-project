@@ -1,5 +1,4 @@
 import WebsiteDisplay from "./WebsiteDisplay";
-import "../styles/SkillDisplay.css";
 import "../styles/Sidebar.css";
 
 function Sidebar(props) {

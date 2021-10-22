@@ -1,3 +1,25 @@
 .header {
   grid-area: header;
+  display: grid;
+  grid-template-columns: 25% 75%;
+  grid-template-areas: 
+    "photo name"
+    "photo title"
+    "photo description";
+}
+
+.header__name {
+  grid-area: name;
+}
+
+.header__title {
+  grid-area: title;
+}
+
+.header__description {
+  grid-area: description;
+}
+
+.header__photo {
+  grid-area: photo;
 }
