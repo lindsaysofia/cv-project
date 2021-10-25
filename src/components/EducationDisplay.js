@@ -15,13 +15,11 @@ function EducationDisplay(props) {
           to,
          } = education;
         return (
-          <div className="education">
-            <p className="education__university">{university}</p>
-            <p className="education__location">{location}</p>
-            <p className="education__degree">{degree}</p>
-            <p className="education__subject">{subject}</p>
-            <p className="education__from">{from}</p>
-            <p className="education__to">{to}</p>
+          <div className="educationDisplay--item">
+            <p className="educationDisplay__university">{university}</p>
+            <p className="educationDisplay__location">{location}</p>
+            <p className="educationDisplay__degreeSubject">{degree} in {subject}</p>
+            <p className="educationDisplay__fromTo">{from}-{to}</p>
           </div>
         );
       })}

@@ -1,0 +1,41 @@
+.experienceDisplay h2 {
+  border-top: 1px solid var(--color-header);
+  border-bottom: 1px solid var(--color-header);
+}
+
+.experienceDisplay--item {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  grid-template-areas: 
+    "fromTo positionCompany"
+    "fromTo location"
+    "fromTo description";
+  gap: 1em;
+  margin: 1em;
+}
+
+.experienceDisplay--item > * {
+  margin: 0;
+}
+
+.experienceDisplay__positionCompany {
+  grid-area: positionCompany;
+}
+
+.experienceDisplay__location {
+  grid-area: location;
+}
+
+.experienceDisplay__description {
+  grid-area: description;
+}
+
+.experienceDisplay__fromTo {
+  grid-area: fromTo;
+  justify-self: end;
+}
+
+.experienceDisplay__positionCompany,
+.experienceDisplay__fromTo {
+  font-weight: bold;
+}

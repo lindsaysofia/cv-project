@@ -1,4 +1,5 @@
 import "../styles/Header.css";
+import photo from "../img/photo.png";
 
 function Header(props) {
   const {
@@ -6,7 +7,6 @@ function Header(props) {
     lastName,
     title,
     description,
-    photo
    } = props.data.personalInformation;
   return (
     <div className="header">
@@ -14,7 +14,7 @@ function Header(props) {
       <p className="header__title">{title}</p>
       <p className="header__description">{description}</p>
       <img className="header__photo"
-          src={photo} 
+          src={photo}
           alt=""
       />
     </div>

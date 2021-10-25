@@ -50,7 +50,7 @@ class App extends Component {
         {
           position: 'Owner',
           company: `Bob's Yard`,
-          location: 'Bobsville',
+          location: 'Bobsville, United Kingdom',
           from: '1997',
           to: '2007',
           description: 'Built and maintained the yard with my father, Robert, and the Can-Do Crew',
@@ -58,7 +58,7 @@ class App extends Component {
         {
           position: 'Owner',
           company: `Bob's Yard`,
-          location: 'Bobsville',
+          location: 'Bobsville, United Kingdom',
           from: '1997',
           to: '2007',
           description: 'Built and maintained the yard with my father, Robert, and the Can-Do Crew',

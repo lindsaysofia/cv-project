@@ -25,7 +25,7 @@ function Sidebar(props) {
       </div>
       <WebsiteDisplay data={props.data}/>
       <div className="sidebar__skill">
-        <h3 >Skills</h3>
+        <h2>Skills</h2>
         <ul>
           {skills.map((skill) => {
             return (

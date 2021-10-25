@@ -15,13 +15,11 @@ function ExperienceDisplay(props) {
           description,
          } = experience;
         return (
-          <div className="experience">
-            <p className="experience__position">{position}</p>
-            <p className="experience__company">{company}</p>
-            <p className="experience__location">{location}</p>
-            <p className="experience__from">{from}</p>
-            <p className="experience__to">{to}</p>
-            <p className="experience__subject">{description}</p>
+          <div className="experienceDisplay--item">
+            <p className="experienceDisplay__positionCompany">{position}, {company}</p>
+            <p className="experienceDisplay__location">{location}</p>
+            <p className="experienceDisplay__fromTo">{from}-{to}</p>
+            <p className="experienceDisplay__subject">{description}</p>
           </div>
         );
       })}

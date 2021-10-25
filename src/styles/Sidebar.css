@@ -1,8 +1,3 @@
-:root {
-  --color-header:#104046;
-  --color-placeholder: #005D5C;
-}
-
 .sidebar {
   grid-area: sidebar;
   background-color: var(--color-header);
@@ -10,8 +5,10 @@
   padding: 1em;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
 }
 
+.sidebar__skill h2,
 h3,
 a {
   color: white;
@@ -20,6 +17,11 @@ a {
 
 .sidebar__location,
 .sidebar__phone,
-.sidebar__email {
+.sidebar__email,
+.sidebar__skill h2 {
   border-bottom: 1px solid white;
+}
+
+.sidebar__skill h2 {
+  border-top: 1px solid white;
 }
