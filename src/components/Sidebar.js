@@ -29,7 +29,7 @@ function Sidebar(props) {
         <ul>
           {skills.map((skill) => {
             return (
-              <p className="sidebar__skillDetail">{skill}</p>
+              <p className="sidebar__skillDetail"><i class="far fa-lightbulb"></i> {skill}</p>
             );
           })}
         </ul>

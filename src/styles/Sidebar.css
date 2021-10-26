@@ -5,7 +5,8 @@
   padding: 1em;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .sidebar__skill h2,
@@ -24,4 +25,9 @@ a {
 
 .sidebar__skill h2 {
   border-top: 1px solid white;
+}
+.sidebar__skill ul,
+.sidebar__skillDetail {
+  margin: 0;
+  padding: 0;
 }
