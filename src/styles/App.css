@@ -15,6 +15,7 @@ h1,
 h2,
 h3 {
   color: var(--color-header);
+  text-transform: uppercase;
 }
 
 ::placeholder {
