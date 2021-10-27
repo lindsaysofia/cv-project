@@ -5,7 +5,7 @@ function ExperienceDisplay(props) {
   return (
     <div className="experienceDisplay">
       <h2>Experience</h2>
-      {experiences.map((experience) => {
+      {experiences.map((experience, index) => {
         const { 
           position,
           company,
@@ -15,7 +15,7 @@ function ExperienceDisplay(props) {
           description,
          } = experience;
         return (
-          <div className="experienceDisplay--item">
+          <div key={index} className="experienceDisplay--item">
             <p className="experienceDisplay__positionCompany">{position}, {company}</p>
             <p className="experienceDisplay__location">{location}</p>
             <p className="experienceDisplay__fromTo">{from}-{to}</p>

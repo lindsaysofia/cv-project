@@ -2,9 +2,9 @@ function WebsiteDisplay(props) {
   const { websites } = props.data.personalInformation;
   return (
     <div className="websiteDisplay">
-      {websites.map((website) => {
+      {websites.map((website, index) => {
         return (
-          <div className="websiteDisplay__website">
+          <div key={index} className="websiteDisplay__website">
             <h3 className="websiteDisplay__websiteName">{website.websiteName}</h3>
             <a 
               className="websiteDisplay__websiteLink" 

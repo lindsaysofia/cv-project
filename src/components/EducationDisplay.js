@@ -5,7 +5,7 @@ function EducationDisplay(props) {
   return (
     <div className="educationDisplay">
       <h2>Education</h2>
-      {educations.map((education) => {
+      {educations.map((education, index) => {
         const { 
           university,
           location,
@@ -15,7 +15,7 @@ function EducationDisplay(props) {
           to,
          } = education;
         return (
-          <div className="educationDisplay--item">
+          <div key={index} className="educationDisplay--item">
             <p className="educationDisplay__university">{university}</p>
             <p className="educationDisplay__location">{location}</p>
             <p className="educationDisplay__degreeSubject">{degree} in {subject}</p>

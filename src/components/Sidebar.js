@@ -27,9 +27,14 @@ function Sidebar(props) {
       <div className="sidebar__skill">
         <h2>Skills</h2>
         <ul>
-          {skills.map((skill) => {
+          {skills.map((skill, index) => {
             return (
-              <p className="sidebar__skillDetail"><i class="far fa-lightbulb"></i> {skill}</p>
+              <p 
+              key={index}
+              className="sidebar__skillDetail"
+              >
+                <i className="far fa-lightbulb"></i> {skill}
+              </p>
             );
           })}
         </ul>
