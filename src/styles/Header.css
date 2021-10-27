@@ -42,3 +42,10 @@
   width: 125px;
   border-radius: 50%;
 }
+
+@media only screen and (max-width: 1300px) {
+  .header__photo img {
+    height: 100px;
+    width: 100px;
+  }
+}
