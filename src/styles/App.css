@@ -18,6 +18,14 @@ h3 {
   text-transform: uppercase;
 }
 
+h1 {
+  text-align: center;
+  font-size: 3em;
+  color: white;
+  background-color: var(--color-header);
+  margin: 0;
+}
+
 ::placeholder {
   color: var(--color-placeholder);
 }
@@ -49,9 +57,10 @@ button:hover {
 }
 
 .app {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  justify-items: center;
+  align-items: start;
   width: 100%;
   height: 100%;
+  grid-template-columns: 1fr 1fr;
 }

@@ -70,7 +70,6 @@ class App extends Component {
   render() {
     return (
       <div className="app">
-        <h1 className="app__header">CV Application</h1>
         <CVInput />
         <CVDisplay data={this.exampleData}/>
       </div>
