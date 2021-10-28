@@ -7,13 +7,16 @@ import LoadExampleButton from "./LoadExampleButton";
 import ResetButton from "./ResetButton";
 import "../styles/CVInput.css";
 
-function CVInput() {
+function CVInput(props) {
   return (
     <div className="cvInput">
-      <PersonalInformationInput />
-      <SkillInput />
-      <EducationInput />
-      <ExperienceInput />
+      <PersonalInformationInput 
+        data={props.data}
+        handleChange={props.handleChange}
+      />
+      <SkillInput data={props.data}/>
+      <EducationInput data={props.data}/>
+      <ExperienceInput data={props.data}/>
       <GenerateButton />
       <LoadExampleButton />
       <ResetButton />

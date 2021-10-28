@@ -2,3 +2,7 @@
   display: flex;
   flex-direction: column;
 }
+
+.websiteInput__header {
+  color: var(--color-header);
+}

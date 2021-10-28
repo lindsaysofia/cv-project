@@ -65,13 +65,69 @@ class App extends Component {
         }
       ],
     };
+    this.state = {
+      personalInformation: {
+        firstName: '',
+        lastName: '',
+        title: '',
+        description: '',
+        photo: '',
+        location: '',
+        phone: '',
+        email: '',
+        websites: [
+          {
+            websiteName: '',
+            websiteLink: '',
+          }
+        ],
+      },
+      skills: [],
+      educations: [],
+      experiences: [],
+    };
+  }
+
+  handleChange = (e) => {
+    const { name, value } = e.target;
+    const { parent, index } = e.target.dataset;
+    console.log({name, value, parent, index})
+    switch (parent) {
+      case "personalInformation":
+        this.setState((prevState) => {
+          return {
+            personalInformation: {
+              ...prevState.personalInformation,
+              [name] : value,
+            }
+          }
+        });
+        break;
+      case "websites":
+        this.setState((prevState) => {
+          const websitesCopy = prevState.personalInformation.websites.slice();
+          websitesCopy[index][name] = value;
+          return {
+            personalInformation: {
+              ...prevState,
+              websites: websitesCopy,
+            }
+          }
+        });
+        break;
+      default:
+        break;
+    }
   }
 
   render() {
     return (
       <div className="app">
-        <CVInput />
-        <CVDisplay data={this.exampleData}/>
+        <CVInput 
+          data={this.state} 
+          handleChange={this.handleChange}
+        />
+        <CVDisplay data={this.state}/>
       </div>
     );
   }
