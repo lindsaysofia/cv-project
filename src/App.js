@@ -82,7 +82,7 @@ class App extends Component {
           }
         ],
       },
-      skills: [],
+      skills: [''],
       educations: [],
       experiences: [],
     };
@@ -91,6 +91,7 @@ class App extends Component {
   handleChange = (e) => {
     const { name, value } = e.target;
     const { parent, index } = e.target.dataset;
+    console.log({name, value, parent, index});
     switch (parent) {
       case 'personalInformation':
         this.setState((prevState) => {
@@ -111,6 +112,15 @@ class App extends Component {
               ...prevState.personalInformation,
               websites: websitesCopy,
             }
+          }
+        });
+        break;
+      case 'skills':
+        this.setState((prevState) => {
+          const skillsCopy = prevState.skills.slice();
+          skillsCopy[index] = value;
+          return {
+            skills: skillsCopy,
           }
         });
         break;
@@ -137,6 +147,15 @@ class App extends Component {
           }
         });
         break;
+      case 'skills':
+        this.setState((prevState) => {
+          const skillsCopy = prevState.skills.slice();
+          skillsCopy.push('');
+          return {
+            skills: skillsCopy,
+          }
+        });
+        break;
       default:
         break;
     }
@@ -148,7 +167,7 @@ class App extends Component {
     switch (parent) {
       case 'websites':
         this.setState((prevState) => {
-          const websitesCopy = prevState.personalInformation.websites.filter((website, websiteIndex) => websiteIndex != index);
+          const websitesCopy = prevState.personalInformation.websites.filter((website, websiteIndex) => websiteIndex !== Number(index));
           return {
             personalInformation: {
               ...prevState.personalInformation,
