@@ -148,7 +148,7 @@ class App extends Component {
     switch (parent) {
       case 'websites':
         this.setState((prevState) => {
-          const websitesCopy = prevState.personalInformation.websites.filter((website, websiteIndex) => websiteIndex !== index);
+          const websitesCopy = prevState.personalInformation.websites.filter((website, websiteIndex) => websiteIndex != index);
           return {
             personalInformation: {
               ...prevState.personalInformation,
