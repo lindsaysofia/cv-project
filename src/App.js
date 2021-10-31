@@ -91,9 +91,8 @@ class App extends Component {
   handleChange = (e) => {
     const { name, value } = e.target;
     const { parent, index } = e.target.dataset;
-    console.log({name, value, parent, index})
     switch (parent) {
-      case "personalInformation":
+      case 'personalInformation':
         this.setState((prevState) => {
           return {
             personalInformation: {
@@ -103,13 +102,56 @@ class App extends Component {
           }
         });
         break;
-      case "websites":
+      case 'websites':
         this.setState((prevState) => {
           const websitesCopy = prevState.personalInformation.websites.slice();
           websitesCopy[index][name] = value;
           return {
             personalInformation: {
-              ...prevState,
+              ...prevState.personalInformation,
+              websites: websitesCopy,
+            }
+          }
+        });
+        break;
+      default:
+        break;
+    }
+  }
+
+  handleAdd = (e) => {
+    const { parent } = e.target.dataset;
+    switch (parent) {
+      case 'websites':
+        this.setState((prevState) => {
+          const websitesCopy = prevState.personalInformation.websites.slice();
+          websitesCopy.push({
+            websiteName: '',
+            websiteLink: '',
+          });
+          return {
+            personalInformation: {
+              ...prevState.personalInformation,
+              websites: websitesCopy,
+            }
+          }
+        });
+        break;
+      default:
+        break;
+    }
+  }
+
+  handleDelete = (e) => {
+    const { parent, index } = e.target.dataset;
+    console.log({parent, index})
+    switch (parent) {
+      case 'websites':
+        this.setState((prevState) => {
+          const websitesCopy = prevState.personalInformation.websites.filter((website, websiteIndex) => websiteIndex !== index);
+          return {
+            personalInformation: {
+              ...prevState.personalInformation,
               websites: websitesCopy,
             }
           }
@@ -126,6 +168,8 @@ class App extends Component {
         <CVInput 
           data={this.state} 
           handleChange={this.handleChange}
+          handleAdd={this.handleAdd}
+          handleDelete={this.handleDelete}
         />
         <CVDisplay data={this.state}/>
       </div>

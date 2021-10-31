@@ -2,6 +2,7 @@ import Website from "./Website";
 import AddButton from "./AddButton";
 
 function WebsiteInput(props) {
+  const { handleAdd, handleChange, handleDelete } = props;
   return (
     <div className="websiteInput">
        <h3 className="websiteInput__header">Add Your Websites</h3>
@@ -10,9 +11,13 @@ function WebsiteInput(props) {
           key={index} 
           index={index}
           website={website}
-          handleChange={props.handleChange}
+          handleChange={handleChange}
+          handleDelete={handleDelete}
         />)}
-      <AddButton />
+      <AddButton 
+        parent="websites" 
+        handleAdd={handleAdd}
+      />
     </div>
   );
 }

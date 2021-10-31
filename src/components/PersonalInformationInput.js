@@ -13,7 +13,7 @@ function PersonalInformationInput(props) {
     email,
     websites,
    } = props.data.personalInformation;
-   const { handleChange } = props;
+   const { handleChange, handleAdd, handleDelete } = props;
   return (
     <div className="personalInformationInput">
       <h2 className="personalInformationInput__header">Personal Information</h2>
@@ -93,6 +93,8 @@ function PersonalInformationInput(props) {
       <WebsiteInput 
         websites={websites} 
         handleChange={handleChange}
+        handleAdd={handleAdd}
+        handleDelete={handleDelete}
       />
     </div>
   );

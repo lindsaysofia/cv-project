@@ -13,6 +13,8 @@ function CVInput(props) {
       <PersonalInformationInput 
         data={props.data}
         handleChange={props.handleChange}
+        handleAdd={props.handleAdd}
+        handleDelete={props.handleDelete}
       />
       <SkillInput data={props.data}/>
       <EducationInput data={props.data}/>
