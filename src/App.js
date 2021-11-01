@@ -93,7 +93,16 @@ class App extends Component {
           to: '',
         },
       ],
-      experiences: [],
+      experiences: [
+        {
+          position: '',
+          company: ``,
+          location: '',
+          from: '',
+          to: '',
+          description: '',
+        },
+      ],
     };
   }
 
@@ -141,6 +150,15 @@ class App extends Component {
           }
         });
         break;
+      case 'experiences':
+        this.setState((prevState) => {
+          const experiencesCopy = prevState.experiences.slice();
+          experiencesCopy[index][name] = value;
+          return {
+            experiences: experiencesCopy,
+          }
+        });
+        break;
       default:
         break;
     }
@@ -185,7 +203,23 @@ class App extends Component {
             to: '',
           });
           return {
-            educations:educationsCopy,
+            educations: educationsCopy,
+          }
+        });
+          break;
+      case 'experiences':
+        this.setState((prevState) => {
+          const experiencesCopy = prevState.experiences.slice();
+          experiencesCopy.push({
+            position: '',
+            company: ``,
+            location: '',
+            from: '',
+            to: '',
+            description: '',
+          });
+          return {
+            experiences: experiencesCopy,
           }
         });
           break;
@@ -221,6 +255,14 @@ class App extends Component {
           const educationsCopy = prevState.educations.filter((education,educationIndex) =>educationIndex !== Number(index));
           return {
             educations: educationsCopy,
+          }
+        });
+        break;
+      case 'experiences':
+        this.setState((prevState) => {
+          const experiencesCopy = prevState.experiences.filter((experience,experienceIndex) => experienceIndex !== Number(index));
+          return {
+            experiences: experiencesCopy,
           }
         });
         break;
