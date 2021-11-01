@@ -2,7 +2,7 @@ import DeleteButton from "./DeleteButton";
 import "../styles/Skill.css";
 
 function Skill(props) {
-  const {handleChange, skill, index, parent} = props;
+  const {handleChange, handleDelete, skill, index, parent} = props;
   return (
     <div className="skill">
       <input 
@@ -14,7 +14,11 @@ function Skill(props) {
         data-index={index}
         onChange={handleChange}
       />
-      <DeleteButton />
+      <DeleteButton 
+        handleDelete={handleDelete}
+        index={index}
+        parent={parent}
+      />
     </div>
   );
 }

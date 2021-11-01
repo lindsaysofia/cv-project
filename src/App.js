@@ -91,7 +91,6 @@ class App extends Component {
   handleChange = (e) => {
     const { name, value } = e.target;
     const { parent, index } = e.target.dataset;
-    console.log({name, value, parent, index});
     switch (parent) {
       case 'personalInformation':
         this.setState((prevState) => {
@@ -163,7 +162,6 @@ class App extends Component {
 
   handleDelete = (e) => {
     const { parent, index } = e.target.dataset;
-    console.log({parent, index})
     switch (parent) {
       case 'websites':
         this.setState((prevState) => {
@@ -173,6 +171,14 @@ class App extends Component {
               ...prevState.personalInformation,
               websites: websitesCopy,
             }
+          }
+        });
+        break;
+      case 'skills':
+        this.setState((prevState) => {
+          const skillsCopy = prevState.skills.filter((skill, skillIndex) => skillIndex !== Number(index));
+          return {
+            skills: skillsCopy,
           }
         });
         break;
