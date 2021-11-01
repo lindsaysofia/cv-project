@@ -22,7 +22,12 @@ function CVInput(props) {
         handleAdd={props.handleAdd}
         handleDelete={props.handleDelete}
       />
-      <EducationInput data={props.data}/>
+      <EducationInput 
+        data={props.data}
+        handleChange={props.handleChange}  
+        handleAdd={props.handleAdd}
+        handleDelete={props.handleDelete}
+      />
       <ExperienceInput data={props.data}/>
       <GenerateButton />
       <LoadExampleButton />

@@ -83,7 +83,16 @@ class App extends Component {
         ],
       },
       skills: [''],
-      educations: [],
+      educations: [
+        {
+          university: '',
+          location: '',
+          degree: '',
+          subject: '',
+          from: '',
+          to: '',
+        },
+      ],
       experiences: [],
     };
   }
@@ -123,6 +132,15 @@ class App extends Component {
           }
         });
         break;
+      case 'educations':
+        this.setState((prevState) => {
+          const educationsCopy = prevState.educations.slice();
+          educationsCopy[index][name] = value;
+          return {
+            educations: educationsCopy,
+          }
+        });
+        break;
       default:
         break;
     }
@@ -155,6 +173,22 @@ class App extends Component {
           }
         });
         break;
+      case 'educations':
+        this.setState((prevState) => {
+          const educationsCopy = prevState.educations.slice();
+          educationsCopy.push({
+            university: '',
+            location: '',
+            degree: '',
+            subject: '',
+            from: '',
+            to: '',
+          });
+          return {
+            educations:educationsCopy,
+          }
+        });
+          break;
       default:
         break;
     }
@@ -179,6 +213,14 @@ class App extends Component {
           const skillsCopy = prevState.skills.filter((skill, skillIndex) => skillIndex !== Number(index));
           return {
             skills: skillsCopy,
+          }
+        });
+        break;
+      case 'educations':
+        this.setState((prevState) => {
+          const educationsCopy = prevState.educations.filter((education,educationIndex) =>educationIndex !== Number(index));
+          return {
+            educations: educationsCopy,
           }
         });
         break;
