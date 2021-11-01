@@ -271,6 +271,10 @@ class App extends Component {
     }
   }
 
+  handleExample = () => {
+    this.setState(this.exampleData);
+  }
+
   render() {
     return (
       <div className="app">
@@ -279,6 +283,7 @@ class App extends Component {
           handleChange={this.handleChange}
           handleAdd={this.handleAdd}
           handleDelete={this.handleDelete}
+          handleExample={this.handleExample}
         />
         <CVDisplay data={this.state}/>
       </div>

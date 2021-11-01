@@ -53,7 +53,7 @@ function PersonalInformationInput(props) {
         name="description"
         onChange={handleChange}
       ></textarea>
-      <div className="personalInformationInput__photo">
+      {/* <div className="personalInformationInput__photo">
         <label htmlFor="photo">Profile Photo</label>
         <input 
           id="photo"
@@ -62,7 +62,7 @@ function PersonalInformationInput(props) {
           type="file"
           accept=".jpg, .jpeg, .png"
         />
-      </div>
+      </div> */}
       <input 
         placeholder="Location"
         type="text"

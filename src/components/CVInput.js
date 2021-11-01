@@ -8,34 +8,43 @@ import ResetButton from "./ResetButton";
 import "../styles/CVInput.css";
 
 function CVInput(props) {
+  const {
+    data,
+    handleChange,
+    handleAdd,
+    handleDelete,
+    handleExample
+  } = props;
   return (
     <div className="cvInput">
       <PersonalInformationInput 
-        data={props.data}
-        handleChange={props.handleChange}
-        handleAdd={props.handleAdd}
-        handleDelete={props.handleDelete}
+        data={data}
+        handleChange={handleChange}
+        handleAdd={handleAdd}
+        handleDelete={handleDelete}
       />
       <SkillInput 
-        data={props.data}
-        handleChange={props.handleChange}  
-        handleAdd={props.handleAdd}
-        handleDelete={props.handleDelete}
+        data={data}
+        handleChange={handleChange}  
+        handleAdd={handleAdd}
+        handleDelete={handleDelete}
       />
       <EducationInput 
-        data={props.data}
-        handleChange={props.handleChange}  
-        handleAdd={props.handleAdd}
-        handleDelete={props.handleDelete}
+        data={data}
+        handleChange={handleChange}  
+        handleAdd={handleAdd}
+        handleDelete={handleDelete}
       />
       <ExperienceInput 
-        data={props.data}
-        handleChange={props.handleChange}  
-        handleAdd={props.handleAdd}
-        handleDelete={props.handleDelete}
+        data={data}
+        handleChange={handleChange}  
+        handleAdd={handleAdd}
+        handleDelete={handleDelete}
       />
       <GenerateButton />
-      <LoadExampleButton />
+      <LoadExampleButton 
+        handleExample={handleExample}
+      />
       <ResetButton />
     </div>
   );
