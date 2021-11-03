@@ -65,7 +65,7 @@ class App extends Component {
         }
       ],
     };
-    this.state = {
+    this.resetData = {
       personalInformation: {
         firstName: '',
         lastName: '',
@@ -104,6 +104,7 @@ class App extends Component {
         },
       ],
     };
+    this.state = this.resetData;
   }
 
   handleChange = (e) => {
@@ -275,6 +276,10 @@ class App extends Component {
     this.setState(this.exampleData);
   }
 
+  handleReset = () => {
+    this.setState(this.resetData);
+  }
+
   render() {
     return (
       <div className="app">
@@ -284,6 +289,7 @@ class App extends Component {
           handleAdd={this.handleAdd}
           handleDelete={this.handleDelete}
           handleExample={this.handleExample}
+          handleReset={this.handleReset}
         />
         <CVDisplay data={this.state}/>
       </div>

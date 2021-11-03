@@ -9,33 +9,33 @@ function Sidebar(props) {
    } = props.data.personalInformation;
 
    const { skills } = props.data;
+
   return (
     <div className="sidebar">
       <div className="sidebar__location">
-        <h3 className="sidebar__locationHeader">Location</h3>
-        <p className="sidebar__locationDetail">{location}</p>
+        <p className="sidebar__locationDetail">{location ? <i class="fas fa-map-marker-alt"></i> : ''} {location}</p>
       </div>
       <div className="sidebar__phone">
-        <h3 className="sidebar__phoneHeader">Phone</h3>
-        <p className="sidebar__phoneDetail">{phone}</p>
+        <p className="sidebar__phoneDetail">{phone ? <i class="fas fa-phone-alt"></i> : ''} {phone}</p>
       </div>
       <div className="sidebar__email">
-        <h3 className="sidebar__emailHeader">Email</h3>
-        <p className="sidebar__emailDetail">{email}</p>
+        <p className="sidebar__emailDetail">{email ? <i class="far fa-envelope"></i> : ''} {email}</p>
       </div>
       <WebsiteDisplay data={props.data}/>
       <div className="sidebar__skill">
         <h2>Skills</h2>
         <ul>
           {skills.map((skill, index) => {
-            return (
-              <p 
-              key={index}
-              className="sidebar__skillDetail"
-              >
-                <i className="far fa-lightbulb"></i> {skill}
-              </p>
-            );
+            if (skill) {
+              return (
+                <p 
+                key={index}
+                className="sidebar__skillDetail"
+                >
+                  <i className="far fa-lightbulb"></i> {skill}
+                </p>
+              );
+            }
           })}
         </ul>
       </div>

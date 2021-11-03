@@ -13,7 +13,8 @@ function CVInput(props) {
     handleChange,
     handleAdd,
     handleDelete,
-    handleExample
+    handleExample,
+    handleReset
   } = props;
   return (
     <div className="cvInput">
@@ -45,7 +46,9 @@ function CVInput(props) {
       <LoadExampleButton 
         handleExample={handleExample}
       />
-      <ResetButton />
+      <ResetButton 
+        handleReset={handleReset}
+      />
     </div>
   );
 }

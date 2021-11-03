@@ -1,8 +1,11 @@
 import "../styles/ResetButton.css";
 
-function ResetButton() {
+function ResetButton(props) {
+  const { handleReset } = props;
   return (
-    <button className="resetButton">
+    <button className="resetButton"
+      onClick={handleReset}
+    >
       Reset
     </button>
   );
