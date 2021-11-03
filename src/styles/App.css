@@ -1,6 +1,7 @@
 :root {
   --color-header:#104046;
   --color-placeholder: #005D5C;
+  --color-hover: #0c3035;
 }
 
 html,
@@ -52,7 +53,7 @@ button {
 }
 
 button:hover {
-  background-color: var(--color-placeholder);
+  background-color: var(--color-hover);
   cursor: pointer;
 }
 
