@@ -7,13 +7,12 @@ function PersonalInformationInput(props) {
     lastName,
     title,
     description,
-    photo,
     location,
     phone,
     email,
     websites,
    } = props.data.personalInformation;
-   const { handleChange, handleAdd, handleDelete } = props;
+   const { handleChange, handleAdd, handleDelete, uploadPhoto } = props;
   return (
     <div className="personalInformationInput">
       <h2 className="personalInformationInput__header">Personal Information</h2>
@@ -53,16 +52,16 @@ function PersonalInformationInput(props) {
         name="description"
         onChange={handleChange}
       ></textarea>
-      {/* <div className="personalInformationInput__photo">
+      <div className="personalInformationInput__photo">
         <label htmlFor="photo">Profile Photo</label>
         <input 
           id="photo"
           name="photo"
-          value={photo}
           type="file"
           accept=".jpg, .jpeg, .png"
+          onChange={uploadPhoto}
         />
-      </div> */}
+      </div>
       <input 
         placeholder="Location"
         type="text"

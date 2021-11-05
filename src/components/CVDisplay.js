@@ -6,9 +6,11 @@ import "../styles/CVDisplay.css";
 function CVDisplay(props) {
   return (
     <div className="cvDisplay">
-      <Header data={props.data}/>
-      <Sidebar data={props.data}/>
-      <Main data={props.data}/>
+      <div id="pdf">
+        <Header data={props.data}/>
+        <Sidebar data={props.data}/>
+        <Main data={props.data}/>
+      </div>
     </div>
   );
 }

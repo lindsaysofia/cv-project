@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './styles/App.css';
 import CVInput from './components/CVInput';
 import CVDisplay from './components/CVDisplay';
+import html2pdf from 'html2pdf.js';
 
 class App extends Component {
   constructor(props) {
@@ -12,7 +13,6 @@ class App extends Component {
         lastName: 'the Builder',
         title: 'Construction Worker',
         description: 'Can we fix it? Yes, we can!',
-        photo: '../img/photo.png',
         location: 'Fixham Harbour',
         phone: '123-456-7890',
         email: 'bob@icanfixthat.com',
@@ -71,7 +71,6 @@ class App extends Component {
         lastName: '',
         title: '',
         description: '',
-        photo: '',
         location: '',
         phone: '',
         email: '',
@@ -105,7 +104,7 @@ class App extends Component {
       ],
     };
     this.state = this.resetData;
-  }
+  };
 
   handleChange = (e) => {
     const { name, value } = e.target;
@@ -163,7 +162,7 @@ class App extends Component {
       default:
         break;
     }
-  }
+  };
 
   handleAdd = (e) => {
     const { parent } = e.target.dataset;
@@ -227,7 +226,7 @@ class App extends Component {
       default:
         break;
     }
-  }
+  };
 
   handleDelete = (e) => {
     const { parent, index } = e.target.dataset;
@@ -270,15 +269,38 @@ class App extends Component {
       default:
         break;
     }
-  }
+  };
 
   handleExample = () => {
     this.setState(this.exampleData);
-  }
+  };
 
   handleReset = () => {
     this.setState(this.resetData);
-  }
+  };
+
+  generatePDF = () => {
+    const element = document.getElementById('pdf');
+    html2pdf(element);
+  };
+
+  // from https://stackoverflow.com/questions/5802580/html-input-type-file-get-the-image-before-submitting-the-form/34840295
+
+  uploadPhoto = () => {
+    let preview = document.querySelector('img');
+    let file = document.querySelector('input[type=file]').files[0];
+    let reader = new FileReader();
+  
+    reader.onloadend = function () {
+      preview.src = reader.result;
+    }
+  
+    if (file) {
+      reader.readAsDataURL(file);
+    } else {
+      preview.src = "";
+    }
+  };
 
   render() {
     return (
@@ -290,6 +312,8 @@ class App extends Component {
           handleDelete={this.handleDelete}
           handleExample={this.handleExample}
           handleReset={this.handleReset}
+          generatePDF={this.generatePDF}
+          uploadPhoto={this.uploadPhoto}
         />
         <CVDisplay data={this.state}/>
       </div>

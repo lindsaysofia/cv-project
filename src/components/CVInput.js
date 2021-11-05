@@ -14,7 +14,9 @@ function CVInput(props) {
     handleAdd,
     handleDelete,
     handleExample,
-    handleReset
+    handleReset,
+    generatePDF,
+    uploadPhoto
   } = props;
   return (
     <div className="cvInput">
@@ -23,6 +25,7 @@ function CVInput(props) {
         handleChange={handleChange}
         handleAdd={handleAdd}
         handleDelete={handleDelete}
+        uploadPhoto={uploadPhoto}
       />
       <SkillInput 
         data={data}
@@ -42,7 +45,9 @@ function CVInput(props) {
         handleAdd={handleAdd}
         handleDelete={handleDelete}
       />
-      <GenerateButton />
+      <GenerateButton 
+        generatePDF={generatePDF}
+      />
       <LoadExampleButton 
         handleExample={handleExample}
       />

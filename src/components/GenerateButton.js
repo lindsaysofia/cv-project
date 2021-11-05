@@ -1,8 +1,11 @@
 import "../styles/GenerateButton.css";
 
-function GenerateButton() {
+function GenerateButton(props) {
+  const { generatePDF } = props;
   return (
-    <button className="generateButton">
+    <button className="generateButton"
+      onClick={generatePDF}
+    >
       Generate PDF
     </button>
   );
