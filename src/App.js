@@ -601,7 +601,7 @@ function App() {
   };
 
   const handleExample = () => {
-    this.setState(this.exampleData);
+    setData(exampleData);
   };
 
   const handleReset = () => {
