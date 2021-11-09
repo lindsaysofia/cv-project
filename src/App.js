@@ -605,7 +605,7 @@ function App() {
   };
 
   const handleReset = () => {
-    this.setState(this.resetData);
+    setData(resetData);
   };
 
   const generatePDF = () => {
