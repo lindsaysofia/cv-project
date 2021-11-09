@@ -489,32 +489,34 @@ function App() {
     const { parent } = e.target.dataset;
     switch (parent) {
       case 'websites':
-        this.setState((prevState) => {
-          const websitesCopy = prevState.personalInformation.websites.slice();
+        setData((prevData) => {
+          const websitesCopy = prevData.personalInformation.websites.slice();
           websitesCopy.push({
             websiteName: '',
             websiteLink: '',
           });
           return {
+            ...prevData,
             personalInformation: {
-              ...prevState.personalInformation,
+              ...prevData.personalInformation,
               websites: websitesCopy,
             }
           }
         });
         break;
       case 'skills':
-        this.setState((prevState) => {
-          const skillsCopy = prevState.skills.slice();
+        setData((prevData) => {
+          const skillsCopy = prevData.skills.slice();
           skillsCopy.push('');
           return {
+            ...prevData,
             skills: skillsCopy,
           }
         });
         break;
       case 'educations':
-        this.setState((prevState) => {
-          const educationsCopy = prevState.educations.slice();
+        setData((prevData) => {
+          const educationsCopy = prevData.educations.slice();
           educationsCopy.push({
             university: '',
             location: '',
@@ -524,13 +526,14 @@ function App() {
             to: '',
           });
           return {
+            ...prevData,
             educations: educationsCopy,
           }
         });
-          break;
+        break;
       case 'experiences':
-        this.setState((prevState) => {
-          const experiencesCopy = prevState.experiences.slice();
+        setData((prevData) => {
+          const experiencesCopy = prevData.experiences.slice();
           experiencesCopy.push({
             position: '',
             company: ``,
@@ -540,10 +543,11 @@ function App() {
             description: '',
           });
           return {
+            ...prevData,
             experiences: experiencesCopy,
           }
         });
-          break;
+        break;
       default:
         break;
     }
