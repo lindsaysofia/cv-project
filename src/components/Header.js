@@ -1,5 +1,4 @@
 import "../styles/Header.css";
-import photo from "../img/photo.png";
 
 function Header(props) {
   const {
@@ -15,8 +14,7 @@ function Header(props) {
       <p className="header__description">{description}</p>
       <div className="header__photo">
         <img
-            src={photo}
-            alt=""
+            alt="Insert Profile Here"
         />
       </div>
     </div>
