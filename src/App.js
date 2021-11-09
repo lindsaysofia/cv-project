@@ -557,36 +557,40 @@ function App() {
     const { parent, index } = e.target.dataset;
     switch (parent) {
       case 'websites':
-        this.setState((prevState) => {
-          const websitesCopy = prevState.personalInformation.websites.filter((website, websiteIndex) => websiteIndex !== Number(index));
+        setData((prevData) => {
+          const websitesCopy = prevData.personalInformation.websites.filter((website, websiteIndex) => websiteIndex !== Number(index));
           return {
+            ...prevData,
             personalInformation: {
-              ...prevState.personalInformation,
+              ...prevData.personalInformation,
               websites: websitesCopy,
             }
           }
         });
         break;
       case 'skills':
-        this.setState((prevState) => {
-          const skillsCopy = prevState.skills.filter((skill, skillIndex) => skillIndex !== Number(index));
+        setData((prevData) => {
+          const skillsCopy = prevData.skills.filter((skill, skillIndex) => skillIndex !== Number(index));
           return {
+            ...prevData,
             skills: skillsCopy,
           }
         });
         break;
       case 'educations':
-        this.setState((prevState) => {
-          const educationsCopy = prevState.educations.filter((education,educationIndex) =>educationIndex !== Number(index));
+        setData((prevData) => {
+          const educationsCopy = prevData.educations.filter((education,educationIndex) =>educationIndex !== Number(index));
           return {
+            ...prevData,
             educations: educationsCopy,
           }
         });
         break;
       case 'experiences':
-        this.setState((prevState) => {
-          const experiencesCopy = prevState.experiences.filter((experience,experienceIndex) => experienceIndex !== Number(index));
+        setData((prevData) => {
+          const experiencesCopy = prevData.experiences.filter((experience,experienceIndex) => experienceIndex !== Number(index));
           return {
+            ...prevData,
             experiences: experiencesCopy,
           }
         });
